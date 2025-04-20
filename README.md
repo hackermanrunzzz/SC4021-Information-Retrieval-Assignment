@@ -74,8 +74,7 @@ npm start
 ## 📽️ Video Presentation
 To conclude our work for the SC4021 Information Retrieval Course Assignment, our team prepared a short video presentation (~5 minutes) to showcase the applications, impact, and creative elements of our project.
 You can watch our video at the following link:
-(LINK)
-
+https://youtu.be/FBzbrYpglho
 ## 📁 Submission Materials
 ### Data Files (Submission Point 4)
 Includes crawled reviews, query results, evaluation dataset, classification outputs, and data for Questions 3 & 5:
