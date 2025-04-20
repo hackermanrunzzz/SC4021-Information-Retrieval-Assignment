@@ -48,6 +48,8 @@ Tokenizers of the models handle:
 * analysis_.json: A nested format organized by movie, with each review's text and predicted labels.
 * Console output: Distribution statistics and sample reviews for each emotion/sentiment.
 
+#### In the event when there is any error running the Final Sentiment Analysis.ipynb on your own local Google Collab, you may access https://colab.research.google.com/drive/1AlH8-NGQGOIWOpWvjG7O-aQg3SFm_pc6?usp=sharing to take a look.
+
 ### Steps to run the classfication models:
 #### STEP 1: Upload the notebook to drive and open them with google colab.
 The folder contains the Jupyter notebook, namely "Final Sentiment Analysis.ipynb". To run the notebooks, we will need TPU hardware accelerator as well as the built-in environment of google colab. Therefore, rather than running on the local machine, using google colab to execute these notebooks is recommended.
@@ -83,4 +85,3 @@ Upon completion, the following output files will be generated:
 - analysis_all_movies.json – Structured output grouped by movie, including review metadata, sentiment, and emotion predictions.
 - analysis_all_movies.csv – Tabular version of the same data, suitable for filtering and analysis.
 
-#### In the event when there is any error running the Final Sentiment Analysis.ipynb on your own local Google Collab, you may access https://colab.research.google.com/drive/1AlH8-NGQGOIWOpWvjG7O-aQg3SFm_pc6?usp=sharing to take a look.
