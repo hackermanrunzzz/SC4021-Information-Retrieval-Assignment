@@ -77,10 +77,12 @@ You can watch our video at the following link:
 (LINK)
 
 ## 📁 Submission Materials
-### Data Files for Questions 3 & 5
-A Google Drive link containing a compressed ZIP folder with all relevant data files used in Questions 3 and 5: (LINK)
+### Data Files (Submission Point 4)
+Includes crawled reviews, query results, evaluation dataset, classification outputs, and data for Questions 3 & 5:
+https://entuedu-my.sharepoint.com/:f:/g/personal/kxing003_e_ntu_edu_sg/EgNs2ikiUG5HuNh9QEg5tYoBY90-M4zBISu_t7RSE51n3A?e=4vK3Pc 
 
 ### Source Code & Libraries for UI and Search Engine
-All source code files, necessary libraries, and a README explaining how to compile and run the code are available here: LINK)
+All source code files, necessary libraries, and a README explaining how to compile and run the code are available here: 
+https://entuedu-my.sharepoint.com/:f:/g/personal/jtan573_e_ntu_edu_sg/EsuYlYpkPnRHsWmUdbdK_AcB03xOFxxr4VPqx4_MJ7Vpmw?e=JXByeg
 
 
