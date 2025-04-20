@@ -45,7 +45,7 @@ Each folder contains its own README file that describes the contents of the fold
 To use the information retrieval system for movie reviews:
 
 **Step 1**: 
-* Make sure that you have Solr installed. https://solr.apache.org/downloads.html.
+* Make sure that you have Solr installed. https://solr.apache.org/downloads.html (Binary releases: solr-9.8.1.tgz)
 * Navigate to the `solr-9.8.1` folder and run:
 ```
 bin/solr start
