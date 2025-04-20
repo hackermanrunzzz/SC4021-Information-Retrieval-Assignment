@@ -66,6 +66,10 @@ npm start
 
 **Step 4:** Navigate to `localhost:3000` to access the application. 
 
+**If you encounter any security-related errors, please run Windows PowerShell as Administrator and follow the steps shown in the screenshot to resolve the issue. Then, restart from Step 1 and proceed with the remaining instructions.**
+![image](https://github.com/user-attachments/assets/19520e74-fbd5-4dc6-a4d9-ae96e84bf437)
+
+
 
 ## 📽️ Video Presentation
 To conclude our work for the SC4021 Information Retrieval Course Assignment, our team prepared a short video presentation (~5 minutes) to showcase the applications, impact, and creative elements of our project.
