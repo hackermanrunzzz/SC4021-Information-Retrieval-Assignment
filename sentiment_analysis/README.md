@@ -83,3 +83,4 @@ Upon completion, the following output files will be generated:
 - analysis_all_movies.json – Structured output grouped by movie, including review metadata, sentiment, and emotion predictions.
 - analysis_all_movies.csv – Tabular version of the same data, suitable for filtering and analysis.
 
+#### In the event when there is any error running the Final Sentiment Analysis.ipynb on your own local Google Collab, you may access https://colab.research.google.com/drive/1AlH8-NGQGOIWOpWvjG7O-aQg3SFm_pc6?usp=sharing to take a look.
