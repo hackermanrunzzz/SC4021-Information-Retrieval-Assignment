@@ -41,7 +41,7 @@ The notebook follows a modular structure:
 
 ## Requirements Used
 
-- Python 3.x
+- Python 3.11
 - [IMDbPY](https://imdbpy.github.io/)
 - Selenium
 - BeautifulSoup
