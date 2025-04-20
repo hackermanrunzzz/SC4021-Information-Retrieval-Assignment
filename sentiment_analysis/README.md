@@ -7,7 +7,7 @@
 * **Final Sentiment Analysis.ipynb:** This Jupyter Notebook includes the complete classification workflow and is used for both **sentiment & emotion classification**, and the evaluation of the manually labeled dataset. This file addresses the requirements of **Part C – Classification, specifically Question 4 of the assignment.**
 * **analysis_all_movies (JSON and CSV formats):** These output files consist of movie reviews that have been annotated with both sentiment (positive, neutral, negative) and emotion tags, generated through the classification pipeline.
 * **manual labelled data.csv:** This file contains a manually annotated dataset of 1,000 movie reviews. It serves as the ground truth for evaluating model performance and conducting the random accuracy assessment on unlabeled data.
-* **all_review_information.json:** This data file comprises all the crawled data which will be used as an input for our classification pipeline.
+* **all_review_information.json:** This data file comprises all the crawled data which will be used as an input for our classification pipeline. Access this file from the Google Drive link.
 
 ### 🎯 **Objective**
 To analyze movie reviews by:
