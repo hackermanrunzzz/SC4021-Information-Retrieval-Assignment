@@ -45,13 +45,14 @@ Each folder contains its own README file that describes the contents of the fold
 To use the information retrieval system for movie reviews:
 
 **Step 1**: 
-* Make sure that you have Solr installed. https://solr.apache.org/downloads.html (Binary releases: solr-9.8.1.tgz)
-* Navigate to the `solr-9.8.1` folder and run:
+* Clone the GitHub Repository and open in VS code
+* Ensure your Node.js is of the latest version
+* Under Terminal, Navigate to the `solr-9.8.1` folder and run:
 ```
 bin/solr start
 ```
 
-**Step 2:**: Navigate to the `backend` folder and run:
+**Step 2:**: Under another terminal, Navigate to the `backend` folder and run:
 ```
 npm install 
 node index.js
