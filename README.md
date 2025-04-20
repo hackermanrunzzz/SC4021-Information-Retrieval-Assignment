@@ -14,7 +14,7 @@ Team members who contributed to the success of the project:
 This repository contains the work done by SC4021-Information Retrieval Team 6 for the course project. The detailed explanation on how to compile and run the source codes are found in the README files in the subfolders of each of the sub-questions for the project.
 
 
-## Problem Statement
+## 📄 Problem Statement
 In the age of digital media, online platforms like IMDb have become central hubs for users to express their opinions about films. These movie reviews are rich in sentiment, ranging from overt praise to subtle critique. However, the sheer volume and subjectivity of user-generated content make it difficult for potential viewers, researchers, and content creators to systematically interpret public opinion.
 
 The objective of this project is to **perform sentiment analysis on IMDb movie review**s by classifying user opinions as positive or negative, while also **capturing the emotional tone of each review** (e.g., joy, anger, sadness). To further enhance interpretability and granularity, we also implemented:
@@ -31,7 +31,7 @@ Nonetheless, several challenges arise:
 
 By leveraging modern NLP techniques such as transformer-based models and task-specific fine-tuning, this project addresses these challenges through a robust pipeline that extracts sentiment polarity, emotional tone, specific aspect sentiments, and sarcastic cues from IMDb reviews.
 
-## Navigating the Repository
+## 🎯Navigating the Repository
 The folders in the repository meets the requirements of the project individually. 
 
 * **Question 1 (Indexing):** `web_scraping_and_indexing`
@@ -41,7 +41,7 @@ The folders in the repository meets the requirements of the project individually
 
 Each folder contains its own README file that describes the contents of the folder.
 
-## How to set up the Web Application
+## 🔧 How to set up the Web Application
 To use the information retrieval system for movie reviews:
 
 **Step 1**: 
