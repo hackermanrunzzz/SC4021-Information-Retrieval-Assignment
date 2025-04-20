@@ -31,10 +31,10 @@ By leveraging modern NLP techniques such as transformer-based models and task-sp
 ## Navigating the Repository
 The folders in the repository meets the requirements of the project individually. 
 
-* Question 1, Indexing: `web_scraping_and_indexing`
-* Question 2, 3: `frontend`, `backend`, `solr-9.8.1`
-* Question 4: `sentiment_analysis`
-* Question 5: `classification_enhancement`
+* Question 1 (Indexing): `web_scraping_and_indexing`
+* Question 2, 3 (UI + Search Engine): `frontend`, `backend`, `solr-9.8.1`
+* Question 4 (Classifcation): `sentiment_analysis`
+* Question 5 (Enhanced Classfication): `classification_enhancement`
 
 Each folder contains its own README file that describes the contents of the folder.
 
