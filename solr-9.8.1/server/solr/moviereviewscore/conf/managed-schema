@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema name="movie_reviews" version="1.6">
+
+  <!-- ===================== FIELD TYPES ===================== -->
+
+  <!-- Exact string matches -->
+  <fieldType name="string" class="solr.StrField" sortMissingLast="true" docValues="true"/>
+
+  <!-- Full-text search with stemming, lowercasing, and stopword removal -->
+  <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100">
+    <analyzer type="index">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.SynonymFilterFactory"
+              synonyms="microtext.txt"
+              expand="true"
+              ignoreCase="true"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt"/>
+      <filter class="solr.PorterStemFilterFactory"/>
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.SynonymFilterFactory"
+              synonyms="microtext.txt"
+              expand="true"
+              ignoreCase="true"/>
+      <filter class="solr.SynonymGraphFilterFactory"
+              synonyms="synonyms_movies.txt"
+              expand="true"
+              ignoreCase="true"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.StopFilterFactory" ignoreCase="true" words="stopwords.txt"/>
+      <filter class="solr.PorterStemFilterFactory"/>
+    </analyzer>
+  </fieldType>
+
+  <!-- Autocomplete text with EdgeNGram for prefix matching -->
+  <fieldType name="text_autocomplete" class="solr.TextField" positionIncrementGap="100">
+    <analyzer type="index">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+      <filter class="solr.EdgeNGramFilterFactory" minGramSize="2" maxGramSize="15"/>
+    </analyzer>
+    <analyzer type="query">
+      <tokenizer class="solr.StandardTokenizerFactory"/>
+      <filter class="solr.LowerCaseFilterFactory"/>
+    </analyzer>
+  </fieldType>
+
+  <!-- Field types required by update processors -->
+  <fieldType name="booleans" class="solr.BoolField" sortMissingLast="true"/>
+  <fieldType name="pfloat" class="solr.TrieFloatField" precisionStep="0" positionIncrementGap="0"/>
+  <fieldType name="plong" class="solr.TrieLongField" precisionStep="0" positionIncrementGap="0"/>
+  <fieldType name="plongs" class="solr.TrieLongField" precisionStep="0" positionIncrementGap="0"/>
+  <fieldType name="pdoubles" class="solr.TrieDoubleField" precisionStep="0" positionIncrementGap="0"/>
+  <fieldType name="pdates" class="solr.TrieDateField" precisionStep="0" positionIncrementGap="0"/>
+
+  <!-- ===================== FIELDS ===================== -->
+
+  <field name="id" type="string" stored="true" indexed="true" required="true" multiValued="false"/>
+  <field name="title" type="text_general" stored="true" indexed="true"/>
+  <field name="rating" type="pfloat" stored="true" indexed="true"/>
+  <field name="body" type="text_general" stored="true" indexed="true"/>
+  <field name="movie_name" type="text_general" stored="true" indexed="true"/>
+  <field name="movie_name_autocomplete" type="text_autocomplete" stored="true" indexed="true"/>
+  <field name="positive_user_ratings" type="pfloat" stored="true" indexed="true"/>
+  <field name="negative_user_ratings" type="pfloat" stored="true" indexed="true"/>
+  <field name="_version_" type="plong" indexed="true" stored="true" multiValued="false"/>
+  <field name="imdb_rating" type="pfloat" stored="true" indexed="true"/>
+  <field name="directors" type="text_general" stored="true" indexed="true" multiValued="true"/>
+  <field name="writers" type="text_general" stored="true" indexed="true" multiValued="true"/>
+  <field name="stars" type="text_general" stored="true" indexed="true" multiValued="true"/>
+  <field name="release_date" type="pdates" stored="true" indexed="true"/>
+  <field name="release_country" type="text_general" stored="true" indexed="true"/>
+  <field name="country_of_origin" type="text_general" stored="true" indexed="true" multiValued="true"/>
+  <field name="budget" type="pfloat" stored="true" indexed="true"/>
+  <field name="gross_worldwide" type="pfloat" stored="true" indexed="true"/> 
+  <field name="language" type="text_general" stored="true" indexed="true" multiValued="true"/>
+  <field name="runtime_minutes" type="pfloat" stored="true" indexed="true"/>
+  <field name="metascore" type="pfloat" stored="true" indexed="true"/>
+  <field name="directors_autocomplete" type="text_autocomplete" stored="true" indexed="true" multiValued="true"/>
+  <field name="stars_autocomplete" type="text_autocomplete" stored="true" indexed="true" multiValued="true"/>
+  <field name="writers_autocomplete" type="text_autocomplete" stored="true" indexed="true" multiValued="true"/>
+  <field name="country_autocomplete" type="text_autocomplete" stored="true" indexed="true" multiValued="true"/>
+  <field name="release_country_autocomplete" type="text_autocomplete" stored="true" indexed="true"/>
+
+
+  <!-- CopyField to support autocomplete -->
+  <copyField source="movie_name" dest="movie_name_autocomplete"/>
+  <copyField source="directors" dest="directors_autocomplete"/>
+  <copyField source="stars" dest="stars_autocomplete"/>
+  <copyField source="writers" dest="writers_autocomplete"/>
+  <copyField source="country_of_origin" dest="country_autocomplete"/>
+  <copyField source="release_country" dest="release_country_autocomplete"/>
+
+  <!-- Primary key -->
+  <uniqueKey>id</uniqueKey>
+
+</schema>

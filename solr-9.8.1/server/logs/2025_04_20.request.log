@@ -1,0 +1,5 @@
+127.0.0.1 - - [20/Apr/2025:02:23:03 +0000] "GET /solr/admin/info/system?wt=javabin&version=2 HTTP/2.0" 200 3786
+127.0.0.1 - - [20/Apr/2025:02:39:15 +0000] "GET http://localhost:8983/solr/metadatacore/select?q=se&defType=edismax&qf=movie_name_autocomplete^2&fl=movie_name&rows=28097&fq=runtime_minutes%3A(%5B121%20TO%20150%5D)&wt=json HTTP/1.1" 200 1283
+127.0.0.1 - - [20/Apr/2025:02:39:16 +0000] "GET http://localhost:8983/solr/metadatacore/select?q=se&defType=edismax&qf=directors_autocomplete^2&fl=directors%2C%20movie_name&rows=28097&fq=runtime_minutes%3A(%5B121%20TO%20150%5D)&wt=json HTTP/1.1" 200 377
+127.0.0.1 - - [20/Apr/2025:02:39:16 +0000] "GET http://localhost:8983/solr/metadatacore/select?q=se&defType=edismax&qf=stars_autocomplete^1&fl=stars%2C%20movie_name&rows=28097&fq=runtime_minutes%3A(%5B121%20TO%20150%5D)&wt=json HTTP/1.1" 200 5825
+127.0.0.1 - - [20/Apr/2025:02:39:16 +0000] "GET http://localhost:8983/solr/metadatacore/select?q=se&defType=edismax&qf=writers_autocomplete^1&fl=writers%2C%20movie_name&rows=28097&fq=runtime_minutes%3A(%5B121%20TO%20150%5D)&wt=json HTTP/1.1" 200 373
